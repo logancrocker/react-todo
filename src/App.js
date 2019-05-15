@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import 'typeface-roboto';
 
-import TodoList from './Components/TodoList'
+import TodoList from './Components/TodoList';
 
 function App() {
   return (
-    <div className="App">
+    <Fragment>
       <TodoList />
-    </div>
+    </Fragment>
+          
+      
+
+    
   );
 }
 

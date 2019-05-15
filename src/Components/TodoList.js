@@ -26,9 +26,12 @@ class TodoList extends React.Component {
   }
 
   handleDelete(id) {
-    console.log("Delete item at index " + id);
+    console.log("Delete item with id " + id);
     var newState = this.state;
-    newState.items.splice(id, 1);
+    var newItems = newState.items.filter((obj) => {
+      return obj.props.id !== id;
+    });
+    newState.items = newItems;
     this.setState(newState);
   }
 
