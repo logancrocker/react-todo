@@ -62,37 +62,42 @@ class TodoItem extends React.Component {
   render() {
 
     return (
-      <Card raised={ this.state.raised }
-            onMouseEnter={ () => { this.handleHover() } }
-            onMouseLeave={ () => { this.handleHover() } }
-            style={ this.state.checked ? { border: '2px solid green' } : {} }>
-        <CardContent>
-          <Grid container
-                direction="row"
-                alignItems="center"
-                justify="center"
-                spacing={24}>
-            <Grid item
-                  xs={1}>
-              <Checkbox checked={ this.state.checked }
-                        onChange={ () => { this.handleCheck() } } 
-                        disabled={ this.state.edit } />
+        <Card raised={ this.state.raised }
+              classes={ { root: '' } }
+              onMouseEnter={ () => { this.handleHover() } }
+              onMouseLeave={ () => { this.handleHover() } }
+              style={ this.state.checked ? { border: '2px solid green', 
+                                             marginBottom: '20px',
+                                             marginLeft: '100px',
+                                             marginRight: 'auto', } : 
+                                           { marginBottom: '20px', } }>
+          <CardContent>
+            <Grid container
+                  direction="row"
+                  alignItems="center"
+                  justify="center"
+                  spacing={24}>
+              <Grid item
+                    xs={1}>
+                <Checkbox checked={ this.state.checked }
+                          onChange={ () => { this.handleCheck() } } 
+                          disabled={ this.state.edit } />
+              </Grid>
+              <Grid item
+                    xs={8}>  
+                    { this.state.edit ? this.renderTextField() : this.renderPlainText() }
+              </Grid>  
+              <Grid item
+                    xs={1}>
+                <Button onClick={ () => { this.handleEdit() } }>{ this.state.edit ? "Ok" : "Edit" }</Button>
+              </Grid> 
+              <Grid item
+                    xs={1}>
+                <Button onClick={ () => this.props.handleDelete(this.props.id) }>Delete</Button>
+              </Grid>        
             </Grid>
-            <Grid item
-                  xs={8}>  
-                  { this.state.edit ? this.renderTextField() : this.renderPlainText() }
-            </Grid>  
-            <Grid item
-                  xs={1}>
-              <Button onClick={ () => { this.handleEdit() } }>{ this.state.edit ? "Ok" : "Edit" }</Button>
-            </Grid> 
-            <Grid item
-                  xs={1}>
-              <Button onClick={ () => this.props.handleDelete(this.props.id) }>Delete</Button>
-            </Grid>        
-          </Grid>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
     );
   }
 }
