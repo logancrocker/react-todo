@@ -58,11 +58,11 @@ class TodoList extends React.Component {
             </Grid>
           </Grid>
           <Grid item
-                xs={8}>
+                xs={12}>
             {this.state.items}
           </Grid>
           <Grid item
-                xs={8}>
+                xs={12}>
             <Button fullWidth
                     variant="outlined"
                     onClick={ () => { this.handleAdd() } }>
