@@ -19,7 +19,7 @@ class TodoList extends React.Component {
     var id = this.state.items.length;
     console.log("This item is at index " + id);
     newState.items.push(<TodoItem key={ uuid.v4() }
-                                  id={ id } 
+                                  id={ uuid.v4() } 
                                   edit
                                   handleDelete={ this.handleDelete } />);
     this.setState(newState);  
