@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import TodoItem from './TodoItem';
-import { Grid, Typography, Button} from '@material-ui/core';
+import { Grid, Typography, Button, Link } from '@material-ui/core';
 import uuid from 'uuid';
 
 class TodoList extends React.Component {
@@ -46,6 +46,16 @@ class TodoList extends React.Component {
             <Typography variant="h1">
               Todo List
             </Typography>
+          </Grid>
+          <Grid item>
+            <Grid container>
+              <Grid item>
+                <Typography variant="h4"
+                            style={ { marginLeft: '50px' } }>
+                  { "By Logan Crocker" }
+                </Typography>
+              </Grid>
+            </Grid>
           </Grid>
           <Grid item
                 xs={8}>
