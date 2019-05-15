@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/react-todo/static/js/main.479c3ccf.chunk.js",
+    "main.js.map": "/react-todo/static/js/main.479c3ccf.chunk.js.map",
+    "runtime~main.js": "/react-todo/static/js/runtime~main.79666361.js",
+    "runtime~main.js.map": "/react-todo/static/js/runtime~main.79666361.js.map",
+    "static/css/2.a1e067d7.chunk.css": "/react-todo/static/css/2.a1e067d7.chunk.css",
+    "static/js/2.fb834a65.chunk.js": "/react-todo/static/js/2.fb834a65.chunk.js",
+    "static/js/2.fb834a65.chunk.js.map": "/react-todo/static/js/2.fb834a65.chunk.js.map",
+    "index.html": "/react-todo/index.html",
+    "precache-manifest.36005765ff2950981afcc4a9c032def9.js": "/react-todo/precache-manifest.36005765ff2950981afcc4a9c032def9.js",
+    "service-worker.js": "/react-todo/service-worker.js",
+    "static/css/2.a1e067d7.chunk.css.map": "/react-todo/static/css/2.a1e067d7.chunk.css.map",
+    "static/media/index.css": "/react-todo/static/media/roboto-latin-900italic.bc833e72.woff"
+  }
+}
