@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import TodoItem from './TodoItem';
-import { Grid, Typography, Button, Link } from '@material-ui/core';
+import { Grid, Typography, Button } from '@material-ui/core';
 import uuid from 'uuid';
 
 class TodoList extends React.Component {

@@ -8,7 +8,6 @@ class TodoItem extends React.Component {
     super(props);
     this.state = {
       checked: false,
-      raised: false,
       edit: props.edit,
       text: '',
     }
@@ -18,12 +17,6 @@ class TodoItem extends React.Component {
     // toggle checked boolean
     var newState = this.state;
     newState.checked = !newState.checked;
-    this.setState(newState);
-  };
-
-  handleHover() {
-    var newState = this.state;
-    newState.raised = !newState.raised;
     this.setState(newState);
   };
 
@@ -62,10 +55,7 @@ class TodoItem extends React.Component {
   render() {
 
     return (
-        <Card raised={ this.state.raised }
-              classes={ { root: '' } }
-              onMouseEnter={ () => { this.handleHover() } }
-              onMouseLeave={ () => { this.handleHover() } }
+        <Card classes={ { root: '' } }
               style={ this.state.checked ? { border: '2px solid green', 
                                              marginBottom: '20px',
                                              marginLeft: '100px',
